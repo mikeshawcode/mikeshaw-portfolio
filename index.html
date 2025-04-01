@@ -4,35 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike Shaw Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* General page styles */
-        body {
-            font-family: Courier, monospace;
-            margin: 1; /* Removes default browser margins */
-            padding: 1;
-        }
- 
-        /* Navigation bar styles */
-        .navbar {
-            display: flex; /* Enables flexbox */
-            justify-content: space-between; /* Pushes left and right content apart */
-            align-items: center; /* Aligns items vertically */
-            padding: 15px 20px; /* Adds padding around the nav */
-            background-color: #f8f9fa; /* Light gray background */
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        /* Style for the navigation links */
-        .nav-links {
-            display: flex; /* Enables flexbox for the right-side links */
-            gap: 15px; /* Adds space between links */
-        }
-    </style>
 </head>
-
 
   <!-- Actual content of the website will be below, in <body>, the way these tags are ordered are the way they will show up on the site -->
   <!-- h1 is the biggest, h6 is the smallest <h1> -->
@@ -42,20 +14,22 @@
   <!-- big and small tag for individual words <big> -->
   <!-- <header> , <main>, <footer> three main parts of the site page-->
 
-  <body>
+<body style="font-family: Courier, monospace; margin: 0; padding: 0;">
+
     <!-- Navigation Bar -->
-    <div class="navbar">
-      <div class="logo">Mike Shaw</div> <!-- Top Left -->
-      <div class="nav-links"> <!-- Top Right -->
-        <span>Home</span>
-        <span>Projects</span>
-        <span>Articles</span>
-        <span>Contact</span>
-      </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #f8f9fa; font-size: 18px; font-weight: bold;">
+        <div>Mike Shaw</div> <!-- Top Left -->
+        <div style="display: flex; gap: 15px;">
+            <!-- Top Right links -->
+            <span>Home</span>
+            <span>Projects</span>
+            <span>Articles</span>
+            <span>Contact</span>
+        </div>
     </div>
 
     <!-- Main Content -->
-    <header>
+    <header style="text-align: center; padding: 50px;">
         <h1>Welcome to Mike S Portfolio</h1>
         <p>Aspiring Software Engineer | AI, Automation, & Severance Enthusiast</p>
     </header>
