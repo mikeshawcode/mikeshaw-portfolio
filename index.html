@@ -4,6 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike Shaw Portfolio</title>
+    <style>
+/* center content and apply general styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        /* Container for the four boxes */
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        /* Left and right rectanlges */
+        .side-box {
+            width: 100px; 
+            height: 300px;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Middle section containing stacked rectangles */
+        .middle-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Individual stacked rectangles*/
+        .middle-box {
+            width: 200px;
+            height: 140px;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
   <!-- Actual content of the website will be below, in <body>, the way these tags are ordered are the way they will show up on the site -->
@@ -14,12 +61,12 @@
   <!-- big and small tag for individual words <big> -->
   <!-- <header> , <main>, <footer> three main parts of the site page-->
 
-<body style="font-family: Courier, monospace; margin: 0; padding: 0;">
+<body>
 
     <!-- Navigation Bar -->
-    <<div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #f8f9fa; font-size: 18px; font-weight: bold;">
+    <div>
         <div>Mike Shaw</div> <!-- Top Left -->
-        <div style="display: flex; gap: 15px;">
+        <div>
             <!-- Top Right links -->
             <span>Home</span>
             <span>Projects</span>
@@ -35,15 +82,16 @@
         <hr/>
     </header>
 
-    <div>  
-        <div> Left Box </div>
+        <!-- Middle Section -->
+    <div class="box-container">
+        <div class="side-box"> Left Box </div>
         
-        <div>
-            <div> Top Box </div>
-            <div> Bottom Box </div>
+        <div class="middle-boxes">
+            <div clas="middle-box"> Top Box </div>
+            <div clas="middle-box"> Bottom Box </div>
         </div>
 
-        <div> Right Box </div>
+        <div class="side-box"> Right Box </div>
         
     </div>
 
