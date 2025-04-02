@@ -1,91 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mike Shaw Portfolio</title>
+    <meta charset="UTF-8"> <!-- Sets the character encoding and ensures proper display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on different screen sizes -->
+    <title>Mike Shaw Portfolio</title> <!-- Sets the title of the webpage -->
     <style>
-        /* center content and apply general styles */
+        /* Removes default margin and padding for a clean layout */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         
-        /* Fixed Navigation Bar */
+        /* Style Navigation Bar */
         .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: white;
-            padding: 15px 20px;
-            border-bottom: 2px solid black;
+            display: flex; /* Makes the navbar items align in a row */
+            justify-content: space-between; /* Spaces out left and right content */
+            align-items: center; /* Vertically centers items */
+            position: fixed; /* Keeps navbar fixed at the top */
+            top: 0; /* Aligns navbar to the top */
+            width: 100%; /* Makes navbar span full width */
+            background-color: white; /* Sets background to white */
+            padding: 15px 20px; /* Adds spacing inside the navbar */
+            border-bottom: 2px solid black; /* Adds a line below navbar */
         }
 
+        /* Styles the logo (Mike Shaw) */
         .logo {
-            font-size: 20px;
-            font-weight: bold;
+            font-size: 20px; /* Makes text larger */
+            font-weight: bold; /* Makes text bold */
         }
 
+        /* Styles the navigation links */
         .nav-links {
-            display: flex;
-            gap: 15px;
+            display: flex; /* Aligns links in a row */
+            gap: 15px; /* Adds space between links */
         }
         
-        /* Container for the four boxes */
+        /* Styles the container for the four boxes */
         .box-container {
-            display: flex;
-            width: 100vw;
-            height: 400px;
-            margin-top: 60px; /* Space for fixed navbar */
+            display: flex; /* Aligns boxes in a row */
+            width: 100vw; /* Makes container take full width */
+            height: 400px; /* Sets height */
+            margin-top: 60px; /* Creates space for the fixed navbar */
         }
         
-        /* Left and right rectanlges */
+        /* Styles the side boxes (left and right) */
         .side-box {
-            flex: 1;
-            background-color: lightblue;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            border: 2px solid black;
+            flex: 1; /* Each side box takes equal space */
+            background-color: lightblue; /* Sets background color */
+            display: flex; /* Centers content */
+            align-items: center; /* Centers content vertically */
+            justify-content: center; /* Centers content horizontally */
+            font-weight: bold; /* Makes text bold */
+            border: 2px solid black; /* Adds a border */
         }
         
-         /* Middle section containing stacked rectangles */
+         /* Styles the middle section containing the two stacked boxes */
         .middle-boxes {
-            display: flex;
-            flex-direction: column;
-            flex: 1.5; /* No gap to ensure the line is perfectly aligned */
+            display: flex; /* Aligns boxes in a column */
+            flex-direction: column; /* Stacks boxes vertically */
+            flex: 1.5; /* Makes middle section bigger than side boxes */
         }
    
-        /* Individual stacked rectangles*/
+        /* Styles the individual middle boxes */
         .middle-box {
-          flex: 1;
-            background-color: lightgray;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            border: 2px solid black;
+            flex: 1; /* Makes both boxes equal height */
+            background-color: lightgray; /* Sets background color */
+            display: flex; /* Centers content */
+            align-items: center;  /* Centers content vertically */
+            justify-content: center; /* Centers content horizontally */
+            font-weight: bold; /* Makes text bold */
+            border: 2px solid black; /* Adds border */
         }
 
-        /* Add a line between the two middle boxes */
+        /* Adds a line between the two middle boxes */
          .middle-box:first-child {
             border-bottom: 2px solid black;
         }
     </style>
 </head>
-
-  <!-- Actual content of the website will be below, in <body>, the way these tags are ordered are the way they will show up on the site -->
-  <!-- h1 is the biggest, h6 is the smallest <h1> -->
-  <!-- paragraph tag, automaticall formats itself <p> -->
-  <!-- break tag for creating space vertically between lines: <br/> -->
-  <!-- horizontal rule tab: straightline across site: <hr/> -->
-  <!-- big and small tag for individual words <big> -->
-  <!-- <header> , <main>, <footer> three main parts of the site page-->
 
 <body>
 
@@ -104,7 +98,6 @@
     <header>
         <h1>Welcome to Mike S Portfolio</h1>
         <p>Aspiring Software Engineer | AI, Automation, & Severance Enthusiast</p>
-        <hr/>
     </header>
 
         <!-- Middle Section -->
@@ -122,3 +115,11 @@
 
 </body>
 </html>
+
+<!-- Actual content of the website will be below, in <body>, the way these tags are ordered are the way they will show up on the site -->
+  <!-- h1 is the biggest, h6 is the smallest <h1> -->
+  <!-- paragraph tag, automaticall formats itself <p> -->
+  <!-- break tag for creating space vertically between lines: <br/> -->
+  <!-- horizontal rule tab: straightline across site: <hr/> -->
+  <!-- big and small tag for individual words <big> -->
+  <!-- <header> , <main>, <footer> three main parts of the site page-->
