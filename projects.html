@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Projects - Mike Shaw</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Mike Shaw</title>
+  <style>
+    /* General page reset and font */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: white;
+      padding: 15px 20px;
+      border-bottom: 2px solid black;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Page content styling */
+    .page-content {
+      margin-top: 100px; /* space for fixed navbar */
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">Mike Shaw</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="articles.html">Articles</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="page-content">
     <h1>My Projects</h1>
-    <p>Here's a list of cool things I've built!</p>
-    <a href="index.html">Back to Home</a>
+    <p>Here's a showcase of some of the projects I've built.</p>
+
+    <!-- Example projects list -->
+    <ul style="text-align: left; max-width: 600px; margin: auto;">
+      <li><strong>To-Do App:</strong> Built with HTML, CSS, and JavaScript</li>
+      <li><strong>Email Automation Tool:</strong> Integrated with AI</li>
+      <li><strong>Portfolio Website:</strong> You're looking at it!</li>
+    </ul>
+  </div>
 </body>
 </html>
