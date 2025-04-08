@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Sets the character encoding and ensures proper display -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive on different screen sizes -->
-    <title>Mike Shaw Portfolio</title> <!-- Sets the title of the webpage -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for proper display of special characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on various screen sizes -->
+    <title>Mike Shaw Portfolio</title> <!-- Title displayed in the browser tab -->
 
-     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts for the Sora font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Removes default margin and padding for a clean layout */
+        /* General body styling, font, and background color */
         body {
-            font-family: Sora, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: Sora, sans-serif; /* Sets font to Sora from Google Fonts */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            background-color: #f4f7f6; /* Light gray background for a subtle clean look */
+            color: #333; /* Dark gray color for text for better readability */
         }
         
-        /* Style Navigation Bar */
+        /* Navigation bar styling */
         .navbar {
-            display: flex; /* Align items horizontally */
-            justify-content: space-between; /* Space between logo and links */
-            align-items: center; /* Vertically center items */
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
-            position: fixed; /* Sticks navbar to the top */
-            top: 0; /* Aligns it to top of the page */
-            width: 100%; /* Makes it full width */
-            background-color: white; /* White background */
-            padding: 10px 20px; /* Padding inside navbar */
-            border-bottom: 2px solid black; /* Line under navbar */
-            box-sizing: border-box; /* Includes padding in width calculation */
-            z-index: 1000; /* Ensures navbar stays on top */
+            display: flex; /* Aligns navbar items in a horizontal row */
+            justify-content: space-between; /* Creates space between logo and links */
+            align-items: center; /* Vertically centers items in navbar */
+            flex-wrap: wrap; /* Allows the navbar to wrap on smaller screens */
+            position: fixed; /* Fixes the navbar at the top of the page */
+            top: 0; /* Aligns navbar to the top */
+            width: 100%; /* Makes navbar full width of the screen */
+            background-color: #ffffff; /* White background for the navbar */
+            padding: 10px 20px; /* Adds padding inside the navbar */
+            border-bottom: 2px solid #e0e0e0; /* Adds a light gray border below the navbar */
+            box-sizing: border-box; /* Ensures padding is included in width calculation */
+            z-index: 1000; /* Ensures navbar stays on top of other content */
         }
 
-        /* Styles the logo (Mike Shaw) */
+        /* Styling for the logo */
         .logo {
-            font-size: 20px; /* Makes text larger */
-            font-weight: bold; /* Makes text bold */
+            font-size: 20px; /* Sets logo text size */
+            font-weight: bold; /* Makes the logo text bold */
+            color: #2c3e50; /* Dark gray color for the logo text */
         }
 
-        /* Styles the navigation links */
+        /* Navigation links styling */
         .nav-links {
-            display: flex; /* Align links in a row */
-            flex-wrap: wrap; /* Allows them to wrap on small screens */
+            display: flex; /* Aligns links in a horizontal row */
+            flex-wrap: wrap; /* Allows links to wrap on small screens */
             gap: 15px; /* Adds space between links */
-            font-size: 16px; /* Sets link font size */
+            font-size: 16px; /* Sets the font size for the links */
         }
         .nav-links a {
-            white-space: nowrap; /* Prevents breaking words in links */
-            text-decoration: none; /* Removes underline */
-            color: black; /* Sets link text color */
+            white-space: nowrap; /* Prevents link text from breaking into multiple lines */
+            text-decoration: none; /* Removes underline from links */
+            color: #3498db; /* Light blue color for the links */
+            font-weight: 600; /* Makes the links slightly bolder */
         }
         
-        @media (max-width: 500px) { /* Media query for small screens */
+        /* Hover effect for navigation links */
+        .nav-links a:hover {
+            background-color: #3498db; /* Changes background color to light blue on hover */
+            color: #ffffff; /* Changes text color to white on hover */
+            border-radius: 5px; /* Rounds the corners of the link on hover */
+        }
+        
+        /* Media query for small screens (max-width 500px) */
+        @media (max-width: 500px) {
             .navbar {
-                flex-direction: column; /* Stack navbar elements vertically */
-                align-items: flex-start; /* Align items to the left */
+                flex-direction: column; /* Stacks navbar elements vertically on small screens */
+                align-items: flex-start; /* Aligns items to the left */
             }
 
             .nav-links {
@@ -60,50 +74,63 @@
             }
         }
 
-        /* Push header down so it's not covered by navbar */
+        /* Pushes header down to avoid overlap with navbar */
         header {
-            margin-top: 80px; /* Creates space below navbar */
-            text-align: center;
+            margin-top: 80px; /* Adds space at the top to avoid navbar overlap */
+            text-align: center; /* Centers the text */
+            color: #2c3e50; /* Dark gray color for the header text */
+        }
+
+        header h1 {
+            font-size: 36px; /* Sets the size of the header */
+            margin-bottom: 10px; /* Adds margin below the header */
+        }
+
+        header p {
+            font-size: 18px; /* Sets the font size for the paragraph */
+            color: #7f8c8d; /* Soft gray color for the paragraph text */
         }
         
-        /* Styles the container for the four boxes */
+        /* Container for the four boxes (left, middle, and right) */
         .box-container {
             display: flex; /* Aligns boxes in a row */
-            width: 100vw; /* Makes container take full width */
-            height: 400px; /* Sets height */
-            margin-top: 60px; /* Creates space for the fixed navbar */
+            width: 100vw; /* Makes the container take the full width of the viewport */
+            height: 400px; /* Sets the height of the container */
+            margin-top: 60px; /* Adds space for the fixed navbar */
         }
         
-        /* Styles the side boxes (left and right) */
+        /* Styling for the side boxes (left and right) */
         .side-box {
-            flex: 1; /* Each side box takes equal space */
-            display: flex; /* Centers content */
-            align-items: center; /* Centers content vertically */
-            justify-content: center; /* Centers content horizontally */
-            font-weight: bold; /* Makes text bold */
-            border: 2px solid black; /* Adds a border */
+            flex: 1; /* Makes each side box take up equal space */
+            background-color: #ffffff; /* White background for side boxes */
+            border: 1px solid #e0e0e0; /* Light gray border for the side boxes */
+            display: flex; /* Centers content inside the side boxes */
+            align-items: center; /* Centers content vertically inside the box */
+            justify-content: center; /* Centers content horizontally inside the box */
+            font-weight: bold; /* Makes the text inside the box bold */
+            border: 2px solid black; /* Adds a black border around the side box */
         }
         
-         /* Styles the middle section containing the two stacked boxes */
+        /* Styling for the middle section with two stacked boxes */
         .middle-boxes {
-            display: flex; /* Aligns boxes in a column */
-            flex-direction: column; /* Stacks boxes vertically */
-            flex: 1.5; /* Makes middle section bigger than side boxes */
+            display: flex; /* Aligns the boxes in a column */
+            flex-direction: column; /* Stacks the boxes vertically */
+            flex: 1.5; /* Makes the middle section larger than the side boxes */
         }
    
-        /* Styles the individual middle boxes */
+        /* Styling for each individual middle box */
         .middle-box {
-            flex: 1; /* Makes both boxes equal height */
-            display: flex; /* Centers content */
-            align-items: center;  /* Centers content vertically */
-            justify-content: center; /* Centers content horizontally */
-            font-weight: bold; /* Makes text bold */
-            border: 2px solid black; /* Adds border */
+            flex: 1; /* Makes each middle box take equal height */
+            display: flex; /* Centers content inside the box */
+            align-items: center; /* Vertically centers content */
+            justify-content: center; /* Horizontally centers content */
+            font-weight: bold; /* Makes the text bold */
+            border: 2px solid black; /* Adds a black border around the middle boxes */
         }
 
         /* Adds a line between the two middle boxes */
-         .middle-box:first-child {
-            border-bottom: 2px solid black;
+        .middle-box:first-child {
+            border-bottom: 2px solid black; /* Adds a black line between the two middle boxes */
         }
     </style>
 </head>
@@ -112,39 +139,41 @@
 
     <!-- Navigation Bar -->
     <div class="navbar">
-        <div class="logo">Mike Shaw</div> <!-- Top Left -->
-        <div class="nav-links"> <!-- Top Right -->
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+        <div class="logo">Mike Shaw</div> <!-- Logo on the left side of the navbar -->
+        <div class="nav-links"> <!-- Navigation links on the right side -->
+            <a href="index.html">Home</a> <!-- Link to the home page -->
+            <a href="projects.html">Projects</a> <!-- Link to the projects page -->
+            <a href="contact.html">Contact</a> <!-- Link to the contact page -->
         </div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content Section -->
     <header>
-        <h1>Welcome to Mike S Portfolio</h1>
-        <p>Learning Frontend Coding | Stacking day, after day, after week, after week, after month, after month, after year...</p>
+        <h1>Welcome to Mike's Portfolio</h1> <!-- Main title in the header -->
+        <p>Learning Frontend Coding | Stacking day, after day, after week, after week, after month, after month, after year...</p> <!-- Description text below the title -->
     </header>
 
-        <!-- Middle Section -->
+    <!-- Main Section with Boxes (Projects, Work Experience, Fun Facts, Education) -->
     <div class="box-container">
-    
-        <!-- Left Box with Project Links (aligned top-left and stacked with no gaps) -->
-       <div class="side-box" style="flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0;">
-           <h2 style="margin: 10px 0 0 10px;">Projects</h2>
-           <div style="display: flex; flex-direction: column; width: 100%;">
-               <a href="project1.html" style="padding: 15px; border-top: 1px solid black; border-bottom: 1px solid black; background-color: white; text-decoration: none; color: black;">Project 1</a>
-               <a href="project2.html" style="padding: 15px; border-bottom: 1px solid black; background-color: white; text-decoration: none; color: black;">Project 2</a>
-               <a href="project3.html" style="padding: 15px; border-bottom: 1px solid black; background-color: white; text-decoration: none; color: black;">Project 3</a>
-           </div>
-       </div>
+        <!-- Left Box with Project Links -->
+        <div class="side-box" style="flex-direction: column; align-items: flex-start; justify-content: flex-start; padding: 0;">
+            <h2 style="margin: 10px 0 0 10px;">Projects</h2> <!-- Title for the Projects section -->
+            <div style="display: flex; flex-direction: column; width: 100%;">
+                <a href="project1.html" style="padding: 15px; border-top: 1px solid black; border-bottom: 1px solid black; background-color: white; text-decoration: none; color: black;">Project 1</a> <!-- Link to Project 1 -->
+                <a href="project2.html" style="padding: 15px; border-bottom: 1px solid black; background-color: white; text-decoration: none; color: black;">Project 2</a> <!-- Link to Project 2 -->
+                <a href="project3.html" style="padding: 15px; border-bottom: 1px solid black; background-color: white; text-decoration: none; color: black;">Project 3</a> <!-- Link to Project 3 -->
+            </div>
+        </div>
         
+        <!-- Middle Section with Work Experience and Fun Facts -->
         <div class="middle-boxes">
-            <div class="middle-box">Work Experience</div>
-            <div class="middle-box">Fun Facts</div>
+            <div class="middle-box">Work Experience</div> <!-- Box for Work Experience -->
+            <div class="middle-box">Fun Facts</div> <!-- Box for Fun Facts -->
         </div>
 
-    <div class="side-box">Education</div>
+        <!-- Right Box for Education -->
+        <div class="side-box">Education</div> <!-- Box for Education -->
+    </div>
 
 </body>
 </html>
