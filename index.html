@@ -14,15 +14,17 @@
         
         /* Style Navigation Bar */
         .navbar {
-            display: flex; /* Makes the navbar items align in a row */
-            justify-content: space-between; /* Spaces out left and right content */
-            align-items: center; /* Vertically centers items */
-            position: fixed; /* Keeps navbar fixed at the top */
-            top: 0; /* Aligns navbar to the top */
-            width: 100%; /* Makes navbar span full width */
-            background-color: white; /* Sets background to white */
-            padding: 15px 20px; /* Adds spacing inside the navbar */
-            border-bottom: 2px solid black; /* Adds a line below navbar */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* allows wrapping on smaller screens */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            padding: 10px 20px;
+            border-bottom: 2px solid black;
+            box-sizing: border-box; /* important to include padding in width */
         }
 
         /* Styles the logo (Mike Shaw) */
@@ -32,13 +34,16 @@
         }
 
         /* Styles the navigation links */
-        .nav-links a {
-            white-space: nowrap; /* Prevents text from breaking weirdly */
-        }
-        
         .nav-links {
-            flex-wrap: wrap; /* Allows links to wrap if needed */
-            max-width: 100%; /* Prevents overflow */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 16px;
+        }
+        .nav-links a {
+            white-space: nowrap; /* prevents links from breaking */
+            text-decoration: none;
+            color: black;
         }
 
         /* Push header down so it's not covered by navbar */
