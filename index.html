@@ -32,9 +32,13 @@
         }
 
         /* Styles the navigation links */
+        .nav-links a {
+            white-space: nowrap; /* Prevents text from breaking weirdly */
+        }
+        
         .nav-links {
-            display: flex; /* Aligns links in a row */
-            gap: 10px; /* Adds space between links */
+            flex-wrap: wrap; /* Allows links to wrap if needed */
+            max-width: 100%; /* Prevents overflow */
         }
 
         /* Push header down so it's not covered by navbar */
