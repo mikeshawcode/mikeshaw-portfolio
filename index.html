@@ -14,17 +14,18 @@
         
         /* Style Navigation Bar */
         .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap; /* allows wrapping on smaller screens */
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: white;
-            padding: 10px 20px;
-            border-bottom: 2px solid black;
-            box-sizing: border-box; /* important to include padding in width */
+            display: flex; /* Align items horizontally */
+            justify-content: space-between; /* Space between logo and links */
+            align-items: center; /* Vertically center items */
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            position: fixed; /* Sticks navbar to the top */
+            top: 0; /* Aligns it to top of the page */
+            width: 100%; /* Makes it full width */
+            background-color: white; /* White background */
+            padding: 10px 20px; /* Padding inside navbar */
+            border-bottom: 2px solid black; /* Line under navbar */
+            box-sizing: border-box; /* Includes padding in width calculation */
+            z-index: 1000; /* Ensures navbar stays on top */
         }
 
         /* Styles the logo (Mike Shaw) */
@@ -35,15 +36,26 @@
 
         /* Styles the navigation links */
         .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            font-size: 16px;
+            display: flex; /* Align links in a row */
+            flex-wrap: wrap; /* Allows them to wrap on small screens */
+            gap: 15px; /* Adds space between links */
+            font-size: 16px; /* Sets link font size */
         }
         .nav-links a {
-            white-space: nowrap; /* prevents links from breaking */
-            text-decoration: none;
-            color: black;
+            white-space: nowrap; /* Prevents breaking words in links */
+            text-decoration: none; /* Removes underline */
+            color: black; /* Sets link text color */
+        }
+        
+        @media (max-width: 500px) { /* Media query for small screens */
+            .navbar {
+                flex-direction: column; /* Stack navbar elements vertically */
+                align-items: flex-start; /* Align items to the left */
+            }
+
+            .nav-links {
+                margin-top: 10px; /* Adds space between logo and links */
+            }
         }
 
         /* Push header down so it's not covered by navbar */
