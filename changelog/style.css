@@ -1,15 +1,20 @@
 
 /* General body styling, font, and background color */
 body {
-  font-family: Sora, sans-serif; /* Sets font to Sora from Google Fonts */
-  margin: 0; /* Removes default margin */
-  padding: 0; /* Removes default padding */
-  background-color: #f4f7f6; /* Light gray background for a subtle clean look */
-  color: #333; /* Dark gray color for text for better readability */
+  font-family: Sora, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #333;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .changelog-container {
-  background-color: #f4f7f6;
+  background-color: #3498db;
   padding: 2rem;
   border-radius: 15px;
   max-width: 500px;
@@ -133,11 +138,5 @@ body {
   .timeline-item:nth-child(even):before {
     left: 5px;
   }
-  body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
   
 }
