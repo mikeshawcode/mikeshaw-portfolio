@@ -6,10 +6,6 @@ body {
   padding: 0; /* Removes default padding */
   background-color: #f4f7f6; /* Light gray background for a subtle clean look */
   color: #333; /* Dark gray color for text for better readability */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 .changelog-container {
@@ -137,4 +133,11 @@ body {
   .timeline-item:nth-child(even):before {
     left: 5px;
   }
+  body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+  
 }
