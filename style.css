@@ -1,0 +1,150 @@
+/* General body styling, font, and background color */
+        body {
+            font-family: Sora, sans-serif; /* Sets font to Sora from Google Fonts */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            background-color: #f4f7f6; /* Light gray background for a subtle clean look */
+            color: #333; /* Dark gray color for text for better readability */
+        }
+        
+        /* Navigation bar styling */
+        .navbar {
+            display: flex; /* Aligns navbar items in a horizontal row */
+            justify-content: space-between; /* Creates space between logo and links */
+            align-items: center; /* Vertically centers items in navbar */
+            flex-wrap: wrap; /* Allows the navbar to wrap on smaller screens */
+            position: fixed; /* Fixes the navbar at the top of the page */
+            top: 0; /* Aligns navbar to the top */
+            width: 100%; /* Makes navbar full width of the screen */
+            background-color: #ffffff; /* White background for the navbar */
+            padding: 10px 20px; /* Adds padding inside the navbar */
+            border-bottom: 2px solid #e0e0e0; /* Adds a light gray border below the navbar */
+            box-sizing: border-box; /* Ensures padding is included in width calculation */
+            z-index: 1000; /* Ensures navbar stays on top of other content */
+        }
+
+        /* Styling for the logo */
+        .logo {
+            font-size: 20px; /* Sets logo text size */
+            font-weight: bold; /* Makes the logo text bold */
+            color: #2c3e50; /* Dark gray color for the logo text */
+        }
+
+        /* Navigation links styling */
+        .nav-links {
+            display: flex; /* Aligns links in a horizontal row */
+            flex-wrap: wrap; /* Allows links to wrap on small screens */
+            gap: 15px; /* Adds space between links */
+            font-size: 16px; /* Sets the font size for the links */
+        }
+        .nav-links a {
+            white-space: nowrap; /* Prevents link text from breaking into multiple lines */
+            text-decoration: none; /* Removes underline from links */
+            color: #3498db; /* Light blue color for the links */
+            font-weight: 600; /* Makes the links slightly bolder */
+        }
+        
+        /* Hover effect for navigation links */
+        .nav-links a:hover {
+            background-color: #3498db; /* Changes background color to light blue on hover */
+            color: #ffffff; /* Changes text color to white on hover */
+            border-radius: 5px; /* Rounds the corners of the link on hover */
+        }
+        
+        /* Media query for small screens (max-width 500px) */
+        @media (max-width: 500px) {
+            .navbar {
+                flex-direction: column; /* Stacks navbar elements vertically on small screens */
+                align-items: flex-start; /* Aligns items to the left */
+            }
+
+            .nav-links {
+                margin-top: 10px; /* Adds space between logo and links */
+            }
+        }
+
+        /* Pushes header down to avoid overlap with navbar */
+        header {
+            margin-top: 80px; /* Adds space at the top to avoid navbar overlap */
+            text-align: center; /* Centers the text */
+            color: #2c3e50; /* Dark gray color for the header text */
+        }
+
+        header h1 {
+            font-size: 36px; /* Sets the size of the header */
+            margin-bottom: 10px; /* Adds margin below the header */
+        }
+
+        header p {
+            font-size: 18px; /* Sets the font size for the paragraph */
+            color: #7f8c8d; /* Soft gray color for the paragraph text */
+        }
+        
+        /* Container for the four boxes (left, middle, and right) */
+        .box-container {
+            display: flex; /* Aligns boxes in a row */
+            width: 100vw; /* Makes the container take the full width of the viewport */
+            height: 400px; /* Sets the height of the container */
+            margin-top: 60px; /* Adds space for the fixed navbar */
+        }
+        
+        /* Styling for the side boxes (left and right) */
+        .side-box {
+            flex: 1; /* Makes each side box take up equal space */
+            background-color: #f4f7f6; /* White background for side boxes */
+            border: 1px solid #e0e0e0; /* Light gray border for the side boxes */
+            display: flex; /* Centers content inside the side boxes */
+            align-items: center; /* Centers content vertically inside the box */
+            justify-content: center; /* Centers content horizontally inside the box */
+            font-weight: bold; /* Makes the text inside the box bold */
+            border: 2px solid black; /* Adds a black border around the side box */
+        }
+
+        /* Custom class for the Projects side-box layout */
+        .projects-box {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0;
+        }
+
+        /* Custom margin for the section heading */
+        .projects-box h2 {
+            margin: 10px 0 0 10px;
+        }
+
+        /* Common style for all project links */
+        .project-link {
+            padding: 15px;
+            background-color: #f4f7f6;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid black;
+        }
+
+        /* Only the first project gets top border too */
+        .project-link.first {
+            border-top: 1px solid black;
+        }
+        
+        /* Styling for the middle section with two stacked boxes */
+        .middle-boxes {
+            display: flex; /* Aligns the boxes in a column */
+            flex-direction: column; /* Stacks the boxes vertically */
+            flex: 1.5; /* Makes the middle section larger than the side boxes */
+        }
+   
+        /* Styling for each individual middle box */
+        .middle-box {
+            flex: 1; /* Makes each middle box take equal height */
+            display: flex; /* Centers content inside the box */
+            align-items: center; /* Vertically centers content */
+            justify-content: center; /* Horizontally centers content */
+            font-weight: bold; /* Makes the text bold */
+            border: 2px solid black; /* Adds a black border around the middle boxes */
+        }
+
+        /* Adds a line between the two middle boxes */
+        .middle-box:first-child {
+            border-bottom: 2px solid black; /* Adds a black line between the two middle boxes */
+        }
