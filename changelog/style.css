@@ -72,7 +72,7 @@ body {
   display: inline-block; /* Makes the content wrap tightly */
 }
 
-.timeline-item:nth-child(even) {
+.timeline-item:nth-of-type(even) {
   left: calc(50% - 1px); /* Moves even items to the left side */
   padding-left: 20px; /* Adds space to the left */
   padding: 0 0 0 50%; /* Swaps padding so content is on the left */
