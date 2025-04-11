@@ -10,12 +10,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: blue;
-  color: green;
+  background-color: #D3D3D3;
+  color: #333;
 }
 
 .changelog-container {
-  background-color: pink;
+  background-color: #f4f7f6;
   padding: 2rem;
   border-radius: 15px;
   max-width: 500px;
@@ -31,7 +31,7 @@ body {
 
 .changelog-container p {
   font-size: 1rem;
-  color: purple;
+  color: #333;
   margin-bottom: 2rem;
 }
 
@@ -45,7 +45,7 @@ body {
   content: '';
   position: absolute;
   width: 2px;
-  background-color: red;
+  background-color: #3498db;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -62,12 +62,12 @@ body {
 
 .timeline-item .timeline-date {
   font-size: 0.9rem;
-  color: orange;
+  color: black;
 }
 
 .timeline-item .timeline-content {
   font-size: 1rem;
-  background-color: yellow;
+  background-color: white;
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -91,7 +91,7 @@ body {
   width: 10px;
   height: 10px;
   right: -4px;
-  background-color: cyan;
+  background-color: #3498db;
   border-radius: 50%;
   top: 10px;
 }
@@ -103,8 +103,8 @@ body {
 
 .button {
   display: inline-block;
-  background-color: black;
-  color: brown;
+  background-color: #3498db;
+  color: white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 8px;
@@ -112,7 +112,7 @@ body {
 }
 
 .button:hover {
-  background-color: gray;
+  background-color: #D3D3D3;
 }
 
 @media (max-width: 600px) {
